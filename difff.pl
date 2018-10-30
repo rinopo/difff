@@ -160,12 +160,12 @@ $table</table>
 <div id=save>
 <hr><!-- ________________________________________ -->
 
-<h4>この結果を公開する</h4>
+<h4>この結果を保存する</h4>
 
 <form method=POST id=save name=save action='${url}save.cgi'>
-<p>この結果をﾃﾞｭﾌﾌサーバに保存し、公開用のURLを発行します。<br>
+<p>この結果をﾃﾞｭﾌﾌサーバに保存し、保存用のURLを発行します。<br>
 削除パスワードを設定しておけば、あとで消すこともできます。<br>
-<b>公開期間は3日間です。</b>公開期間を過ぎると自動的に削除されます。</p>
+<!--<b>公開期間は3日間です。</b>公開期間を過ぎると自動的に削除されます。--></p>
 
 <table id=passwd>
 <tr>
@@ -174,10 +174,10 @@ $table</table>
 </tr>
 </table>
 
-<input type=submit onclick='return savehtml();' value='結果を公開する'>
+<input type=submit onclick='return savehtml();' value='結果を保存する'>
 
-<p>「結果を公開する」を押さない限り、入力した文書などがサーバに保存されることはありません。<br>
-この機能はテスト運用中のものです。予告なく提供を中止することがあります。</p>
+<p>「結果を保存する」を押さない限り、入力した文書などがサーバに保存されることはありません。<br>
+<!--この機能はテスト運用中のものです。予告なく提供を中止することがあります。--></p>
 </form>
 </div>
 --EOS--
@@ -299,7 +299,7 @@ $message =~ s{^(ERROR.*)$}{<p><font color=red>$1</font></p>}s ;
 
 #- ▼ トップページ：引数がない場合
 (not $message) and $message = <<'--EOS--'
-<div id=news>
+<div id=news><!--
 <p>新着情報：</p>
 
 <ul>
@@ -329,7 +329,7 @@ $message =~ s{^(ERROR.*)$}{<p><font color=red>$1</font></p>}s ;
 	<li>2008-02-18　日本語対応 (ver.4)
 	<li>2004-02-19　初代 difff 完成 (ver.1)
 </ul>
-</div>
+--></div>
 
 <hr><!-- ________________________________________ -->
 
@@ -340,7 +340,7 @@ $message =~ s{^(ERROR.*)$}{<p><font color=red>$1</font></p>}s ;
 
 and $sequenceA = <<'--EOS--'
 下記の文章を比較してください。
-   Betty Botter bought some butter, 
+   Betty Botter bought some butter,
 But, she said, this butter's bitter;
 If I put it in my batter,
 It will make my batter bitter,
@@ -360,7 +360,7 @@ Betty Botter bought some butter,
 But, she said, the butter's bitter;
 If I put it in my batter,
 That will make my batter bitter.
-But a bit of better butter, 
+But a bit of better butter,
 That will make my batter better.
 So she bought a bit of butter
 Better than her bitter butter.
@@ -434,7 +434,7 @@ my $html = <<"--EOS--" ;
 		element2.setAttribute('value', document.difff.sequenceB.value);
 		document.save.appendChild(element2);
 
-		return confirm('本当に公開してもいいですか？\\n[OK] → 結果を公開し、そのページに移動します。');
+		return confirm('本当に保存してもいいですか？\\n[OK] → 結果を保存し、そのページに移動します。');
 	}
 //-->
 </script>
@@ -479,14 +479,14 @@ my $html = <<"--EOS--" ;
 	テキスト比較ツール difff《ﾃﾞｭﾌﾌ》</a></font><!--
 --><font size=3>ver.6.1</font>
 &emsp;
-<font size=1 style='vertical-align:16px'>
+<!--<font size=1 style='vertical-align:16px'>
 	<a href='${url}en/'>English</a> |
 	Japanese
 </font>
 &emsp;
 <font size=1 style='vertical-align:16px'>
 <a href='${url}v5/'>旧バージョン (ver.5)</a>
-</font>
+</font>-->
 <hr><!-- ________________________________________ -->
 </div>
 
