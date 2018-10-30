@@ -16,7 +16,7 @@ use utf8 ;
 use POSIX ;
 
 # 保存したHTMLファイルから作業を再開できるよう、FORMの送り先に完全URLを指定
-my $url = 'https://difff.jp/' ;
+my $url = "$ENV{'REQUEST_SCHEME'}://$ENV{'HTTP_HOST'}/" ;
 # 保存したHTMLファイルから作業を再開できなくてもよい場合は相対パスを指定
 # my $url = './' ;
 
