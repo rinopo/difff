@@ -339,35 +339,9 @@ $message =~ s{^(ERROR.*)$}{<p><font color=red>$1</font></p>}s ;
 --EOS--
 
 and $sequenceA = <<'--EOS--'
-下記の文章を比較してください。
-   Betty Botter bought some butter,
-But, she said, this butter's bitter;
-If I put it in my batter,
-It will make my batter bitter,
-But a bit of better butter
-Will make my batter better.
-So she bought a bit of butter
-Better than her bitter butter,
-And she put it in her batter,
-And it made her batter better,
-So 'twas better Betty Botter
-Bought a bit of better butter.
 --EOS--
 
 and $sequenceB = <<'--EOS--' ;
-下記の文章を，ﾋﾋ較してくだちい．
-Betty Botter bought some butter,
-But, she said, the butter's bitter;
-If I put it in my batter,
-That will make my batter bitter.
-But a bit of better butter,
-That will make my batter better.
-So she bought a bit of butter
-Better than her bitter butter.
-And she put it in her batter,
-And it made her batter better.
-So it was better Betty Botter
-Bought a bit of better butter.
 --EOS--
 #- ▲ トップページ：引数がない場合
 
